@@ -210,7 +210,7 @@ public class experimentalPosterClass {
 		try {
 
 			HttpPost httpPost = new HttpPost(
-					"https://discordapp.com/api/webhooks/460103743417876510/c_QGExB95Q-yd0H1vtwAG597CeibuvpG3MA4pj0BkZcU3m4zp1AtSu64aUnXKpFgflC7");
+					"");
 
 			httpPost.setEntity(entity);
 
