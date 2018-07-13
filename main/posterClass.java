@@ -28,6 +28,7 @@ import net.rithms.riot.constant.Platform;
 public class posterClass {
 	net.rithms.riot.api.endpoints.static_data.dto.ChampionList championList;
 	HashMap<String, String> map;
+	final String webHook = "YourHookHere";
 	final String artUrl = "http://ddragon.leagueoflegends.com/cdn/8.13.1/img/champion/";
 	final String splashUrl = "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/";
 
@@ -213,8 +214,7 @@ public class posterClass {
 	public void postFunction(HttpClient httpClient2, StringEntity entity) {
 		try {
 
-			HttpPost httpPost = new HttpPost(
-					"https://discordapp.com/api/webhooks/465632157164109834/QK-XgBgaO9YEAcf-FqqvTZkbsaZBvjyQjRyJh2T8mysnFYh-da_p_hxQKNREbtelyCkv");
+			HttpPost httpPost = new HttpPost(webHook);
 
 			httpPost.setEntity(entity);
 
