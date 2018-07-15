@@ -15,8 +15,8 @@ This bot fetches information from the riot-api and posts a summoners stats to a 
 - Edit file main/RiotBot.java with api-key and summoners names and ID
 - Edit file main/posterClass.java with your webhook url
 
-___
-# In action
+
+# In Action
 ![image](https://i.imgur.com/SwZkbTg.png)
 
 
