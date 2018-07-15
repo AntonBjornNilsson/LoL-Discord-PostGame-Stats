@@ -51,18 +51,18 @@ public class RiotBot implements Runnable {
 		RiotApi api = setup();
 		
 		while (true) {
-			for (int boner = 0; boner < friendsNames.length; boner++) {
+			for (int i = 0; i < friendsNames.length; i++) {
 
-				if (!isActive[boner]) {
+				if (!isActive[i]) {
 
-					printCurrent(api, friendsNames[boner]);
+					printCurrent(api, friendsNames[i]);
 					try {
-						CurrentGameInfo cGame = api.getActiveGameBySummoner(Platform.EUW, friendsID[boner]);
-						System.out.println(friendsNames[boner] + " is playing game " + cGame.getGameId());
+						CurrentGameInfo cGame = api.getActiveGameBySummoner(Platform.EUW, friendsID[i]);
+						System.out.println(friendsNames[i] + " is playing game " + cGame.getGameId());
 						System.out.println("----------------------------------------------------------------");
-						Thread poller = new pollingThread(api, friendsNames[boner], friendsID[boner], this, niceArray[boner]);
+						Thread poller = new pollingThread(api, friendsNames[i], friendsID[i], this, niceArray[i]);
 						poller.start();
-						isActive[boner] = true;
+						isActive[i] = true;
 					} catch (RiotApiException e) {
 						System.out.println("Player is not in a game");
 						System.out.println("----------------------------------------------------------------");
