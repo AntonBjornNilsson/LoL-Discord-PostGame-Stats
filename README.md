@@ -9,7 +9,7 @@ This bot fetches information from the riot-api and posts a summoners stats to a 
 [Apache HTTPClient](https://hc.apache.org/)
 
 # Installation
-- git clone https://github.com/AntonBjornNilsson
+- git clone https://github.com/AntonBjornNilsson/LoL-Discord-PostGame-Stats.git
 - install dependencies
 - Get an api-key from https://developer.riotgames.com/
 - Edit file main/RiotBot.java with api-key and summoners names and ID
